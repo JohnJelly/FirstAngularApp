@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PostComponent implements OnInit {
   public title = "List of Posts"
   public postMessage = "Message from post component parent"
+  public childMessage = 'From child component.'
   
   @Input() fromParent: string;
 
