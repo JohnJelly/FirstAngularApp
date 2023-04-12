@@ -11,6 +11,7 @@ export class AppComponent implements AfterViewInit {
   parentMessage = 'Message coming from parent module.';
   anotherMessage: string;
   fromChildOutput: string;
+  username: string;
 
   @ViewChild(PostComponent) childComp: any;
 
@@ -25,5 +26,9 @@ export class AppComponent implements AfterViewInit {
 
   receiveMessage($event: any) {
     this.fromChildOutput = $event;
+  } 
+
+  onKeyup() {
+    console.log(this.username);
   }
 }
